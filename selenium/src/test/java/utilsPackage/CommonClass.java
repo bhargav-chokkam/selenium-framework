@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CommonClasses {
+public class CommonClass {
 	WebDriver driver;
 
 	public void setupBrowser(String browserName) {
@@ -42,6 +42,10 @@ public class CommonClasses {
 		}
 		driver.manage().window().maximize();
 		System.out.println("Browser Status: " + browserInstance);
+	}
+
+	public WebDriver getBrowserDriver() {
+		return driver;
 	}
 
 	public void getSpecficURL(String url) {

@@ -1,30 +1,27 @@
 package basePackage;
 
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
-import utilsPackage.CommonClasses;
+import utilsPackage.CommonClass;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 
 public class BaseTest {
-	CommonClasses com;
+	CommonClass com;
 	static WebDriver driver;
 	String browser = "chrome";
-	String url = "https://www.facebook.com/";
 
 	@BeforeTest
 	public void beforeTest() {
-		com = new CommonClasses();
+		com = new CommonClass();
 		com.setupBrowser(browser);
-		com.getSpecficURL(url);
+		driver = com.getBrowserDriver();
 	}
 
 	@AfterTest
 	public void afterTest() {
-		driver.quit();
+		com.closeBrowser();
 	}
 
 }
