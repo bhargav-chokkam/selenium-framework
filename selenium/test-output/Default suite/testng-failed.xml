@@ -6,8 +6,9 @@
       <class name="basePackage.TestSample">
         <methods>
           <include name="tileValidation"/>
-          <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="urlValidation"/>
         </methods>
       </class> <!-- basePackage.TestSample -->
     </classes>

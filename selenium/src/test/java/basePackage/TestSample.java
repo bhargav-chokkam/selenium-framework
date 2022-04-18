@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class TestSample extends BaseTest {
+public class TestSample extends preLaunch {
 
 	String url = "http://automationpractice.com/";
 	String title = "My Store";
@@ -14,7 +14,6 @@ public class TestSample extends BaseTest {
 	@Test
 	public void urlValidation() {
 		Reporter.log("Expected Url: " + url);
-		com.getSpecficURL(url);
 		String currentUrl = driver.getCurrentUrl();
 		Reporter.log("Current Url: " + currentUrl);
 		assertTrue(currentUrl.contains(url), "Url Mismatched");
@@ -25,7 +24,7 @@ public class TestSample extends BaseTest {
 	public void tileValidation() {
 		Reporter.log("Expected Tile: " + title);
 		String currenttitle = driver.getTitle();
-//		System.out.println("Current Url: " + currenttitle);
+		System.out.println("Current Url: " + driver.getTitle());
 		Reporter.log("Actaul Title: " + currenttitle);
 		assertTrue(currenttitle.equals(title), "Title Mismatch");
 
