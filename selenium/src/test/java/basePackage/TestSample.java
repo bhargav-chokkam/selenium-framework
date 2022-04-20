@@ -1,18 +1,17 @@
 package basePackage;
 
 import static org.testng.Assert.assertTrue;
-
-import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class TestSample extends preLaunch {
-
-	String url = "http://automationpractice.com/";
 	String title = "My Store";
 
+	@Parameters("url")
+
 	@Test
-	public void urlValidation() {
+	public void urlValidation(String url) {
 		Reporter.log("Expected Url: " + url);
 		String currentUrl = driver.getCurrentUrl();
 		Reporter.log("Current Url: " + currentUrl);

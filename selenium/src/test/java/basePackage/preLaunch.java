@@ -24,7 +24,7 @@ public class preLaunch {
 
 	@AfterTest
 	public void afterTest() {
-		com.closeBrowser();
+//		com.closeBrowser();
 	}
 
 }

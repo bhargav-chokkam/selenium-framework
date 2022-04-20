@@ -65,9 +65,8 @@ public class CommonClass {
 		System.out.println("***Browser Closed***");
 	}
 
-	public void sendKeys(String element, String elementData) {
-		driver.findElement(By.xpath(element)).sendKeys(elementData);
-		System.out.println(elementData + " entered at given element " + element);
+	public void sendKeys(WebElement element, String data) {
+		element.sendKeys(data);
 	}
 
 	public void clearField(String element) {
@@ -76,10 +75,8 @@ public class CommonClass {
 		System.out.println("Value at the field after clearing is: " + driver.findElement(By.xpath(element)).getText());
 	}
 
-	public void clickButton(String element) {
-		String buttonName = driver.findElement(By.xpath(element)).getText();
-		driver.findElement(By.xpath(element)).click();
-		System.out.println("Clicked on " + buttonName + " button");
+	public void clickButton(WebElement Button) {
+		Button.click();
 	}
 
 	public void submitButton(String element) {
