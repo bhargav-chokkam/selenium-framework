@@ -3,17 +3,18 @@ package basePackage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjectModel.LoginPage;
+import pageObjectModel.HomePage;
+
 
 public class SignUpFlow extends preLaunch {
-	LoginPage obj;
+	HomePage homePageObject;
 
 	@BeforeClass
 	public void loginPageObjectInit() {
-		obj = new LoginPage(driver);
+		homePageObject = new HomePage(driver);
 	}
 	@Test
 	public void singUpFlow() {
-		obj.signIn();
+		homePageObject.signIn();
 	}
 }

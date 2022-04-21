@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilsPackage.CommonClass;
 import utilsPackage.ReadData;
 
-public class LoginPage {
+public class HomePage {
 	CommonClass com;
 	private WebDriver driver;
 	ReadData dataObject;
@@ -21,7 +21,7 @@ public class LoginPage {
 	@FindBy(xpath = "//input[@id='email_create']")
 	WebElement emailElement;
 
-	public LoginPage(WebDriver driver) {
+	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		com = new CommonClass();
 		dataObject = new ReadData();
