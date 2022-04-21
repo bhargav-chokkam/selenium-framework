@@ -79,9 +79,8 @@ public class CommonClass {
 		Button.click();
 	}
 
-	public void submitButton(String element) {
-		driver.findElement(By.xpath(element)).submit();
-		System.out.println("Submitted Form of Element: " + element);
+	public void submitButton(WebElement submitButton) {
+		submitButton.submit();
 	}
 
 	public void isDisplayedCheck(String element) {
